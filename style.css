@@ -1,0 +1,38 @@
+div {
+    display: inline;
+    
+}
+
+.timer{
+    float: right;
+    padding: 10px;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.score{
+    display: inline-block;
+    padding: 10px;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.wrapper{
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin-top: 60px;
+    margin-left: 380px;
+    
+}
+
+.home{
+    font-weight: bold;
+}
+
+#button-color{
+    background-color: dodgerblue;
+    font-weight: bold;
+}
