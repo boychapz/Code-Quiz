@@ -8,9 +8,9 @@
 </head>
 <body>
     
-    <div class="score"><a href="highscore.html"></a> Highscores </div>
+    <div id="highscore" class="score"><a href="highscore.html"></a> Highscores </div>
     
-    <div class="timer"> Time: <span>0</span></div>
+    <div class="timer"> Time: <span id="count">0</span></div>
 
     <div class="wrapper">
         <div class="home">
@@ -19,18 +19,22 @@
                 Keep in mind that incorrect answers will penalize your score/time by ten seconds. Good Luck!
             </p>
 
-            <div> <a href="quiz.html"><button id="button-color"> Start Quiz </button></a></div>
-
-
+            <div> <button id="start"> Start Quiz </button></a></div>
         </div>
-
-
     </div>
 
+<div id="quiz-container" style="display: none;"></div>
+<div id="question" style="display: none;"><p>Question</p></div>
 
+<div id="choices"  style="display: none;">
+ <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
+ <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
+ <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
+ <div class="choice" id="D" onclick="checkAnswer('D')">D</div>
+</div>
+<div id="displayChoice"></div>
 
-
-    <script src="./script.js"></script>
+<script src="./script.js"></script>
     
 </body>
 </html>
