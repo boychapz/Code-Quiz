@@ -5,53 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <script defer src="questions.js"></script>
     <title>Code Quiz</title>
   </head>
   <body>
-    <div class="container">
-      <div class="hide" id="question-container">
-        <div id="question"></div>
-        <div id="answer-buttons" class="btn-grid">
-          <button class="btn" id="answer1">Answer 1</button>
-          <button class="btn" id="answer2">Answer 1</button>
-          <button class="btn" id="answer3">Answer 1</button>
-          <button class="btn" id="answer4">Answer 1</button>
+    <div class="jumbotron jumbotron-fluid" style="text-align: center;">
+      <div class="container" style="text-align: center;">
+        <div class="hide" id="question-container">
+          <div id="question"></div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn btn-primary" id="answer1">Answer 1</button>
+            <button class="btn btn-info" id="answer2">Answer 1</button>
+            <button class="btn btn-danger" id="answer3">Answer 1</button>
+            <button class="btn btn-warning" id="answer4">Answer 1</button>
+          </div>
         </div>
+        <p id="start-paragraph">
+          This is a coding quiz containing 5 different questions about
+          Javascript. There is a 75s <br />
+          timer for the quiz. If a question is missed 15 seconds are taken away
+          from the timer <br />
+          and when the timer hits 0 no more questions may be answered. The
+          faster a question is <br />
+          answered the more points are rewarded for a correct answer.<br />
+          Click Start to begin, good Luck!
+        </p>
+        <button id="start-btn" class="start-btn btn">Start game</button>
       </div>
-      <p id="start-paragraph">
-        This is a coding quiz containing 5 different questions about Javascript.
-        There is a 75s <br />
-        timer for the quiz. If a question is missed 15 seconds are taken away
-        from the timer <br />
-        and when the timer hits 0 no more questions may be answered. The faster
-        a question is <br />
-        answered the more points are rewarded for a correct answer.
-      </p>
-      <button id="start-btn" class="start-btn btn">Start game</button>
-    </div>
-    <div class="timer" id="start-timer"></div>
+      <div class="timer" id="start-timer"></div>
 
-    <div id="score-sub">
-      <div class="score hide" id="score-keeper"></div>
-      <br />
-      <form method="get" id="submit-form" class="hide">
-        Enter Initials
-        <input type="text" name="initial" id="score-submit" /><br />
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+      <div id="score-sub">
+        <div class="score hide" id="score-keeper"></div>
+        <br />
+        <form method="get" id="submit-form" class="hide">
+          Enter Initials
+          <input type="text" name="initial" id="score-submit" /><br />
+          <hr />
+          <input type="submit" value="Submit" />
+        </form>
+        <br />
+      </div>
 
-    <div class="end-buttons">
-      <button class="btn hide" id="view-scores">View Highscores</button>
-      <button class="btn hide" id="go-back">Go Back</button>
-      <button class="btn hide" id="clear">Clear Scores</button>
-    </div>
+      <div class="end-buttons">
+        <button class="btn hide" id="view-scores">View Highscores</button>
+        <button class="btn hide" id="go-back">Go Back</button>
+        <button class="btn hide" id="clear">Clear Scores</button>
+      </div>
 
-    <div id="score-list" class="hide">
-      <ul>
-        High Scores
-      </ul>
+      <div id="score-list" class="hide">
+        <ul>
+          High Scores
+        </ul>
+      </div>
     </div>
   </body>
 </html>
