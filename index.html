@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Code-Quiz</title>
-</head>
-<body>
-    
-    <div id="highscore" class="score"><a href="highscore.html"></a> Highscores </div>
-    
-    <div class="timer"> Time: <span id="count">0</span></div>
-
-    <div class="wrapper">
-        <div class="home">
-            <h1>Coding Quiz</h1>
-            <p>Try to answer the following question code-related questions withing the time limit. 
-                Keep in mind that incorrect answers will penalize your score/time by ten seconds. Good Luck!
-            </p>
-
-            <div> <button id="start"> Start Quiz </button></a></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="questions.js"></script>
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hide" id="question-container">
+        <div id="question"></div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn" id="answer1">Answer 1</button>
+          <button class="btn" id="answer2">Answer 1</button>
+          <button class="btn" id="answer3">Answer 1</button>
+          <button class="btn" id="answer4">Answer 1</button>
         </div>
+      </div>
+      <p id="start-paragraph">
+        This is a coding quiz containing 5 different questions about Javascript.
+        There is a 75s <br />
+        timer for the quiz. If a question is missed 15 seconds are taken away
+        from the timer <br />
+        and when the timer hits 0 no more questions may be answered. The faster
+        a question is <br />
+        answered the more points are rewarded for a correct answer.
+      </p>
+      <button id="start-btn" class="start-btn btn">Start game</button>
+    </div>
+    <div class="timer" id="start-timer"></div>
+
+    <div id="score-sub">
+      <div class="score hide" id="score-keeper"></div>
+      <br />
+      <form method="get" id="submit-form" class="hide">
+        Enter Initials
+        <input type="text" name="initial" id="score-submit" /><br />
+        <input type="submit" value="Submit" />
+      </form>
     </div>
 
-<div id="quiz-container" style="display: none;"></div>
-<div id="question" style="display: none;"><p>Question</p></div>
+    <div class="end-buttons">
+      <button class="btn hide" id="view-scores">View Highscores</button>
+      <button class="btn hide" id="go-back">Go Back</button>
+      <button class="btn hide" id="clear">Clear Scores</button>
+    </div>
 
-<div id="choices"  style="display: none;">
- <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
- <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
- <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
- <div class="choice" id="D" onclick="checkAnswer('D')">D</div>
-</div>
-<div id="displayChoice"></div>
-
-<script src="./script.js"></script>
-    
-</body>
+    <div id="score-list" class="hide">
+      <ul>
+        High Scores
+      </ul>
+    </div>
+  </body>
 </html>

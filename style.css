@@ -1,38 +1,52 @@
-div {
-    display: inline;
-    
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.timer{
-    float: right;
-    padding: 10px;
-    color: dodgerblue;
-    font-weight: bold;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.score{
-    display: inline-block;
-    padding: 10px;
-    color: dodgerblue;
-    font-weight: bold;
+.btn {
+  background-color: rgb(199, 70, 199);
+  border: 1px solid gray;
+  padding: 12px 24px;
+  font-size: 16px;
 }
 
-.wrapper{
-    text-align: center;
-    align-items: center;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    margin-top: 60px;
-    margin-left: 380px;
-    
+.btn:hover {
+  background-color: purple;
 }
 
-.home{
-    font-weight: bold;
+.btn-grid .btn {
+  display: block;
 }
 
-#start{
-    background-color: dodgerblue;
-    font-weight: bold;
+.timer {
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 30px;
+}
+
+.score {
+  position: fixed;
+  margin-top: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+.end-buttons {
+  display: inline;
+  position: fixed;
+  margin-top: 200px;
+}
+
+#submit-form {
+  position: fixed;
+  margin-top: 100px;
 }
